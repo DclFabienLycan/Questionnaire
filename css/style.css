@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar.navbar-8 .navbar-toggler-icon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger4.svg?color=1729B0');
+    }
+
+header {
+    background-color: #DF2626;
+    margin-bottom: 2%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#logo {
+    border: 1px solid black;
+    box-shadow: 2px 3px 6px black;
+    height: 120px;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    width: 120px;
+}
+
+h1 {
+    border: 1px solid black;
+    border-radius: 50px;
+    box-shadow: 2px 3px 6px black;
+    color: #DF2626;
+    font-size: 2em;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+    width: 100%;
+}
+
+#log {
+    display: flex;
+    align-content: center;
+    text-align: center;
+}
+
+#log p {
+
+}
