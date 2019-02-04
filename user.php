@@ -1,5 +1,5 @@
 <?php 
-session_start();
+// session_start();
 
 // String random pour token de confirmation
 function str_random($lenght) {
@@ -10,7 +10,7 @@ function str_random($lenght) {
 if(!empty($_POST)) {
     
     $errors = array();
-    require_once 'php/pdo.php';
+    require_once 'pdo.php';
     
     // Vérification disponibilité pseudo et si il est correct
     if(empty($_POST['pseudo']) || !preg_match('/^[a-zA-Z0-9_]+$/', $_POST['pseudo'])) {
@@ -71,8 +71,8 @@ if(!empty($_POST)) {
     <title>Inscription</title>
 </head>
 <body>
-    <?php include 'php/pdo.php';
-          include 'php/header.php'; ?>
+    <?php include 'pdo.php';
+          include 'header.php'; ?>
 
 <!-- Vérification des données du formulaire -->
 <?php if(!empty($errors)): ?>
@@ -113,9 +113,9 @@ if(!empty($_POST)) {
                 </div>
                 <button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit" name="submit">S'enregistrer</button>
             </form>
-            <div id="log">
+            <div class="text-center" id="log">
                 <p><strong>Ou si vous êtes déjà inscrit</strong> <a class="nav-link" href="connexion.php">Se connecter</a></p>
             </div>
         </div>
 
-<?php require 'php/footer.php'; ?>
+<?php require 'footer.php'; ?>

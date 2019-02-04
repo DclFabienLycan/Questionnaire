@@ -1,7 +1,7 @@
 <?php
 // Authentification + vérification des données pour valider
 if(!empty($_POST) && !empty($_POST['pseudo']) && !empty($_POST['pass'])) {
-    require_once 'php/pdo.php';
+    require_once 'pdo.php';
     $req = $bdd->prepare("SELECT * FROM membre WHERE (pseudo_membre = :pseudo OR email_membre = :pseudo) AND dateInscription_membre IS NOT NULL");
     $req->execute(['pseudo' => $_POST['pseudo']]);
     $membre = $req->fetch();
@@ -33,22 +33,22 @@ if(!empty($_POST) && !empty($_POST['pseudo']) && !empty($_POST['pass'])) {
     <title>Questionnaire</title>
 </head>
 <body>
-    <?php require 'php/header.php'; ?>
+    <?php require 'header.php'; ?>
     <main>
-<h1>Se connecter</h1>
+        <h1>Se connecter</h1>
 
-<form action="" method="POST">
-    <div class="form-group">
-        <label for="">Pseudo ou email</label>
-        <input type="text" name="pseudo" class="form-control" required>
-    </div>
+        <form action="" method="POST">
+            <div class="form-group">
+                <label for="">Pseudo ou email</label>
+                <input type="text" name="pseudo" class="form-control" required>
+            </div>
 
-    <div class="form-group">
-        <label for="">Mot de passe</label>
-        <input type="password" name="pass" class="form-control" required>
-    </div>
+            <div class="form-group">
+                <label for="">Mot de passe</label>
+                <input type="password" name="pass" class="form-control" required>
+            </div>
 
-    <button type="submit" class="btn btn-primary">Se connecter</button>
+            <button type="submit" class="btn btn-primary">Se connecter</button>
 
-</form>
-<?php require 'php/footer.php';
+        </form>
+<?php require 'footer.php';

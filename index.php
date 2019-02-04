@@ -9,12 +9,13 @@
     <title>Questionnaire</title>
 </head>
 <body>
-    <?php require 'php/header.php'; ?>
+    <?php require 'header.php'; ?>
     <main>
     <div class="container-fluid">
+   
         <div class="container">
             <img id="logo" src="image/logo.svg" alt="logo">
             <h1>The Last (Of Us ?)</h1>
         </div>
     </div>
-    <?php require_once 'php/footer.php'; ?>
+    <?php require_once 'footer.php'; ?>
